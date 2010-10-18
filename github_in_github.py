@@ -44,7 +44,7 @@ def reset_build_directory():
     "Resets the directory where the sphinxdocs will be built."
     
     try:
-        os.system("rm -r %s" % settings.build_dir)
+        os.system("rm -rf %s" % settings.build_dir)
     except:
         pass
     os.system("cp -r %s %s"%(settings.build_dir_template, settings.build_dir))
@@ -65,6 +65,20 @@ def write_repo_pages():
         repo_file =  open(repo_page_name, "w")
         repo_file.write(repo_page)
         repo_file.close()
+        
+def build_html():
+    "Creates the html"
+    os.chdir(settings.build_dir)
+    os.system("make html")
+    
+def put_on_github():
+    "Puts the generated html on github"
+    os.system("git clone %s %s" % (settings.clone_url, settings.clone_dir))
+    os.system("cp -R _build/html/* %s" % settings.clone_dir)
+    os.chdir(settings.clone_dir)
+    os.system("git add .")
+    os.system('git commit -m "Here be Dragons"')
+    os.system('git push origin master')
 
     
     
@@ -73,3 +87,5 @@ if __name__ == "__main__":
     reset_build_directory()
     write_index_page()
     write_repo_pages()
+    build_html()
+    put_on_github()
