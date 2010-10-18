@@ -1,0 +1,40 @@
+
+Welcome to {{ username }}'s github page.
+================================================================
+
+{{ username }} has {{ repo_count }} repositories with {{ watcher_count }} watchers
+and {{ fork_count }} forks.
+
+
+{% for repo in repos %}
+
+{{ repo.name }}
+---------------------------------------------------------------
+
+{{ repo.description }}
+
+Watchers: {{ repo.watchers }}
+Forks: {{ repo.forks }}
+
+{% endfor %}
+
+Contents:
+
+.. toctree::
+   :maxdepth: 2
+   {% for repo in repos %}
+   {{ repo.name }}
+   {% endfor %}
+   
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+
+
+------------------------------------------------------
+
+

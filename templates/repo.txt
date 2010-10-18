@@ -1,0 +1,9 @@
+{{ repo.name }}
+---------------------------------------------------------------
+
+{{ repo.description }}
+
+Watchers: {{ repo.watchers }}
+Forks: {{ repo.forks }}
+Url: {{ repo.url }}
+Homepage: {{ repo.homepage }}
