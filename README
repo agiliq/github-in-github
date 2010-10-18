@@ -1,0 +1,21 @@
+Takes a github account and creates a html pages for it, and puts it on githu pages.
+
+How it proceeds.
+
+1. Get data from Github API
+2. Uses Jinja2 to write ReST docs.
+3. Build html from the Rest docs.
+4. Pushes the html to a Git repo from which you build github pages.
+
+tl;dr: Yo dawg, I heard you like github, so I put a github in your github,
+so you can github while you github.
+
+Installation
+--------------------------
+
+1. Git clone
+2. Create sercrets.py from secrets.example.py
+3. edit settings.py
+4. ./github_in_github.py
+5. Here be magic.
+
