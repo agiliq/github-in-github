@@ -76,6 +76,7 @@ def put_on_github():
     os.system("git clone %s %s" % (settings.clone_url, settings.clone_dir))
     os.system("cp -R _build/html/* %s" % settings.clone_dir)
     os.chdir(settings.clone_dir)
+    os.system("touch .nojekyll")
     os.system("git add .")
     os.system('git commit -m "Here be Dragons"')
     os.system('git push origin master')
@@ -83,7 +84,6 @@ def put_on_github():
     
     
 if __name__ == "__main__":
-    #create_index()
     reset_build_directory()
     write_index_page()
     write_repo_pages()

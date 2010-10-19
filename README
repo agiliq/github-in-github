@@ -16,6 +16,7 @@ Installation
 1. Git clone
 2. Create sercrets.py from secrets.example.py
 3. edit settings.py
-4. ./github_in_github.py
-5. Here be magic.
+4. (optional) Edit build/conf_override.py to edit sphinx settings.
+5. ./github_in_github.py
+6. Here be magic.
 
