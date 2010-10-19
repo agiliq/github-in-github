@@ -1,10 +1,11 @@
-Takes a github account and creates a html pages for it, and puts it on githu pages.
+Takes a github account, creates html pages for it, 
+and puts it on github pages.
 
 How it proceeds.
 
-1. Get data from Github API
+1. Get data for specified account from Github API
 2. Uses Jinja2 to write ReST docs.
-3. Build html from the Rest docs.
+3. Build html from the ReST docs.
 4. Pushes the html to a Git repo from which you build github pages.
 
 tl;dr: Yo dawg, I heard you like github, so I put a github in your github,
