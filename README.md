@@ -26,5 +26,13 @@ Example
 
 Example page generated.
 
-agiliq.github.com
-shabda.github.com
+* [agiliq.github.com](http://agiliq.github.com)
+* [shabda.github.com](http://shabda.github.com)
+
+If you generate a page with this tell me, and will list it here.
+
+Bug Reports
+--------------
+Open a ticket at github or email shada@agiliq.com
+
+
